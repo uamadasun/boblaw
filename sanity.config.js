@@ -10,7 +10,7 @@ const config = defineConfig({
   basePath: "/admin",
   plugins: [structureTool()],
   schema: { types: schemas },
-  useCdn: true,
+  useCdn: false,
 });
 
 export default config;
