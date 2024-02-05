@@ -1,6 +1,6 @@
 'use client'
-import React from "react";
-import { useState } from "react";
+// import React from "react";
+import { useState, React } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../assets/images/main-logo.png";
@@ -20,6 +20,7 @@ const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState('Home')
 
+  console.log(currentPage)
 
   return (
     <div>
@@ -70,15 +71,15 @@ const NavBar = () => {
           onClose={setMobileMenuOpen}
         >
           <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-2/5 overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-2/5 overflow-y-auto bg-blue-700 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Noire Beaute by J</span>
-                {/* <Image  src={Logo} alt="noire beaute by j logo" width={200} height={50} /> */}
+                <span className="sr-only">bob law firm</span>
+                {/* <Image  src={Logo} alt="bob law firm logo" width={200} height={50} /> */}
               </Link>
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-black bg-black"
+                className="-m-2.5 rounded-md p-2.5 text-white "
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -92,7 +93,7 @@ const NavBar = () => {
                     <Link
                       href={item.href}
                       key={item.name}
-                      className={item.name !== currentPage ? "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-black " : "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-blue-700  "}
+                      className={item.name !== currentPage ? "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-white " : "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-gold-400  "}
                       onClick={(e)=> setCurrentPage(e.target.text)}
                     >
                       {item.name}
