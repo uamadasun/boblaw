@@ -22,4 +22,3 @@ export async function getBlogs() {
     revalidate:60,
   }}, {cache: 'no-store'});
 }
-// {cache: 'no-store'}
