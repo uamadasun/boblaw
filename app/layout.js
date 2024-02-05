@@ -29,10 +29,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${roboto.variable}`}>
       <body className={inter.className}>
-        {/* <NavBar /> */}
+        <NavBar />
         {children}
         <div className="h-10 mb-2"></div>
-        {/* <Footer /> */}
+        <Footer />
         </body>
     </html>
   );
