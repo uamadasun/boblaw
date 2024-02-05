@@ -18,5 +18,8 @@ export async function getBlogs() {
         url,
         content
     }`
-  );
+  , {next: {
+    tags:['blog'],
+  }});
 }
+// {cache: 'no-store'}
