@@ -19,7 +19,7 @@ export async function getBlogs() {
         content
     }`
   , {next: {
-    tags:['blog'],
+    revalidate:60,
   }});
 }
 // {cache: 'no-store'}
