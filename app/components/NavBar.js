@@ -1,4 +1,4 @@
-'use client'
+"use client";
 // import React from "react";
 import { useState, React } from "react";
 import { Dialog } from "@headlessui/react";
@@ -18,9 +18,9 @@ const NavBar = () => {
   ];
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState('Home')
+  const [currentPage, setCurrentPage] = useState("Home");
 
-  console.log(currentPage)
+  console.log(currentPage);
 
   return (
     <div>
@@ -30,9 +30,13 @@ const NavBar = () => {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5"  onClick={() => setCurrentPage('Home')} >
+            <Link
+              href="/"
+              className="-m-1.5 p-1.5"
+              onClick={() => setCurrentPage("Home")}
+            >
               <span className="sr-only">Bob Law</span>
-              <Image  src={Logo} alt="bob law logo" width={200} height={50}/>
+              <Image src={Logo} alt="bob law logo" width={200} height={50} />
             </Link>
           </div>
           <div className="flex lg:hidden">
@@ -42,7 +46,14 @@ const NavBar = () => {
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon className={mobileMenuOpen ? `h-6 w-6 hidden fill-black` : `h-6 w-6 fill-black`} aria-hidden="true" />
+              <Bars3Icon
+                className={
+                  mobileMenuOpen
+                    ? `h-6 w-6 hidden fill-black`
+                    : `h-6 w-6 fill-black`
+                }
+                aria-hidden="true"
+              />
             </button>
           </div>
 
@@ -51,15 +62,18 @@ const NavBar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={item.name !== currentPage ? "text-sm font-semibold leading-6 text-black hover:text-black group transition duration-300" : "text-sm font-semibold leading-6 text-blue-700 hover:text-gold-500 group transition duration-300"}
-                onClick={(e)=> setCurrentPage(e.target.text)}
+                className={
+                  item.name !== currentPage
+                    ? "text-sm font-semibold leading-6 text-black hover:text-black group transition duration-300"
+                    : "text-sm font-semibold leading-6 text-blue-700 hover:text-gold-500 group transition duration-300"
+                }
+                onClick={(e) => setCurrentPage(e.target.text)}
               >
                 {item.name}
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span>
-
               </Link>
             ))}
-            <Button mobile={false}/>
+            <Button mobile={false} classInfo={'bg-gold-400 hover:bg-blue-600 hover:text-gray-100 transition duration-150 ease-out hover:ease-in font-semibold px-2 text-sm rounded-sm  hover:scale-110'}/>
           </div>
         </nav>
 
@@ -93,30 +107,33 @@ const NavBar = () => {
                     <Link
                       href={item.href}
                       key={item.name}
-                      className={item.name !== currentPage ? "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-white " : "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-gold-400  "}
-                      onClick={(e)=> setCurrentPage(e.target.text)}
+                      className={
+                        item.name !== currentPage
+                          ? "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-white "
+                          : "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-gold-400  "
+                      }
+                      onClick={(e) => setCurrentPage(e.target.text)}
                     >
                       {item.name}
                     </Link>
                   ))}
-            <Button mobile={true}/>
-                  
+                  <Button
+                    mobile={true}
+                    classInfo={
+                      " bg-gold-400 font-semibold px-8 py-2 mt-4 text-sm rounded-sm w-full text-black"
+                    }
+                  />
                 </div>
               </div>
             </div>
           </Dialog.Panel>
         </Dialog>
       </header>
-
     </div>
   );
 };
 
 export default NavBar;
-
-
-
-
 
 // 'use client'
 // import { Fragment } from 'react'
@@ -346,4 +363,3 @@ export default NavBar;
 //     </Disclosure>
 //   )
 // }
-
