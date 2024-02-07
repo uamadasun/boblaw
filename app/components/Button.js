@@ -5,7 +5,7 @@ const Button = (props) => {
   return (
     <a href="/" target="_blank">
       <button className={!mobile ? `${classInfo} invisible md:visible ` : `${classInfo} visible md:invisible`} >
-        Book Now
+        Call Now
       </button>
     </a>
   );
