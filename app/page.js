@@ -8,12 +8,12 @@ export default async function Home() {
   
   return (
     <div>
-      <section className="w-full h-auto mt-32  md:flex flex-col md:flex-row hidden ">
+      <section className=" justify-around  w-full h-auto mt-32 hidden  md:flex flex-col md:flex-row  ">
         <div
           className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
           aria-hidden="true"
         />
-        <div className="flex-2 md:flex-1 h-auto align-middle justify-center my-auto pl-4 ">
+        <div className="flex-2 md:flex-1 h-auto align-middle justify-center my-auto pl-4">
           <h1 className=" text-3xl md:text-6xl my-6 text-center md:text-left text-gray-500">
             HAVE YOU BEEN SERIOUSLY INJURED?
           </h1>
@@ -28,7 +28,7 @@ export default async function Home() {
           />
   
         </div>
-        <div className="flex-1">
+        
           <Image
             src={banner.src}
             width={600}
@@ -36,12 +36,12 @@ export default async function Home() {
             className="h-full "
             alt="benjamin o bengston"
           />
-        </div>
+        
       </section>
 
 {/* MOBILE HERO BANNER */}
       <section
-        className=" my-auto py-10 px-1 md:pt-24 h-96 flex flex-col mt-20 bg-center bg-cover bg-no-repeat md:invisible"
+        className=" w-full my-auto py-10 px-1 md:pt-24 h-96 flex flex-col mt-20 bg-right bg-cover bg-no-repeat md:invisible"
         style={{
           backgroundImage: `url('${mobileBanner.src}')`, 
         }}

@@ -65,7 +65,7 @@ const NavBar = () => {
                 href={item.href}
                 className={
                   item.name !== currentPage
-                    ? "text-sm font-semibold leading-6 text-black hover:text-black group transition duration-300"
+                    ? "text-sm font-semibold leading-6 text-black hover:text-gold-500 group transition duration-300"
                     : "text-sm font-semibold leading-6 text-blue-700 hover:text-gold-500 group transition duration-300"
                 }
                 onClick={(e) => setCurrentPage(e.target.text)}

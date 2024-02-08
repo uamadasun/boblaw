@@ -52,3 +52,28 @@ body {
   width: 100%;
   overflow:auto;
 }
+
+@media (max-width:540px){
+
+
+}
+
+@media (max-width:375px){
+  
+
+}
+
+@media (min-width:1024px){
+  
+
+}
+
+@media (max-width:330px){
+  
+
+}
+
+@media (max-width:280px){
+  
+
+}
