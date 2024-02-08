@@ -13,19 +13,21 @@
 /* Heading Styles */
 
 h1, h2, h3 {
-  font-family: 'Montserrat', serif;
+  
 }
 
 h1 {
   font-size: 2rem; /* Adjust the font size as needed */
   line-height: 1.2; /* Adjust the line height as needed */
   margin-bottom: 10px; /* Adjust the margin as needed for spacing */
+  font-family: 'Montserrat', serif;
 }
 
 h2 {
   font-size: 1.5rem;
   line-height: 1.2;
   margin-bottom: 8px;
+  font-family: 'Roboto', sans-serif;
 }
 
 h3 {
@@ -51,6 +53,12 @@ body {
   box-sizing: border-box;
   width: 100%;
   overflow:auto;
+}
+
+.highlights p{
+  font-family: 'Roboto', sans-serif;
+  color: #9CB3C1;
+  
 }
 
 @media (max-width:540px){
