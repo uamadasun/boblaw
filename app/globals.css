@@ -60,9 +60,14 @@ body {
   color: #9CB3C1;
   
 }
+@media (max-width:280px){
+  
 
-@media (max-width:540px){
+}
 
+
+@media (max-width:330px){
+  
 
 }
 
@@ -71,17 +76,27 @@ body {
 
 }
 
-@media (min-width:1024px){
-  
+@media (min-width:912px){
+  .desk-banner{
+    margin-bottom: -55px;
+  }
+
 
 }
 
-@media (max-width:330px){
-  
+/* @media (max-width:1024px){
+  .desk-banner{
+    margin-bottom: -55px;
+  }
 
-}
+} */
 
-@media (max-width:280px){
-  
+/* @media (min-width:1280px){
+  .desk-banner{
+    margin-bottom: -54px;
+  }
 
-}
+} */
+
+
+
