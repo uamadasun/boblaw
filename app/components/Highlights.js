@@ -6,7 +6,7 @@ const Highlights = (props) => {
   return (
     <div className='highlights flex flex-col text-center align-middle justify-center items-center w-full h-fit'>
         <Image src={imageHref} alt={message} width={75} height={75} className='w-16'/>
-        <p className='uppercase font-bold text-lg px-0'>{message}</p>
+        <p className='uppercase font-bold text-lg px-5 md:px-0'>{message}</p>
         
     </div>
   )
