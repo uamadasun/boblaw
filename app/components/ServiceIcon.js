@@ -14,19 +14,19 @@ export const ServiceIcon = (props) => {
             className="mx-auto w-fit m-4 h-fit rounded-md absolute top-0 left-0 opacity-100 hover:opacity-0 px-2"
           />
         </a>
-        <div className="group group-hover:relative ">
+        <div className="group group-hover:relative flex flex-col ">
           <Image
-            src={serviceShade}
+            src={service}
             alt={`image of service: ${name}`}
             className="mx-auto w-fit m-4 h-fit rounded-md px-2"
           />
-          {/* <button
-            className="invisible group-hover:visible  
-            absolute  px-6  -mt-20 mx-8 w-3/4 mr-10
+          <button
+            className="invisible group-hover:visible  absolute inset-x-8 bottom-1/4 md:p-1
+              
              bg-gold-400 text-black font-extrabold rounded-sm"
           >
             Learn More
-          </button> */}
+          </button>
         </div>
       </div>
     </div>
