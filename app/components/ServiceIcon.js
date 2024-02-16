@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Button from "./Button";
+import Link from "next/link";
 
 export const ServiceIcon = (props) => {
   const { service, serviceShade, name } = props;
@@ -20,13 +21,14 @@ export const ServiceIcon = (props) => {
             alt={`image of service: ${name}`}
             className="mx-auto w-fit m-4 h-fit rounded-md px-2"
           />
-          <button
+          <Link href={`/service/${name}`}><button
             className="invisible group-hover:visible  absolute inset-x-8 bottom-1/4 md:p-1
               
-             bg-gold-400 text-black font-extrabold rounded-sm"
+             bg-gold-400 text-black font-extrabold rounded-sm" 
           >
             Learn More
           </button>
+          </Link>
         </div>
       </div>
     </div>
