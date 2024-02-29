@@ -4,8 +4,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { getPages } from "@/sanity/sanity-utils";
 import Link from "next/link";
-import FetchPages from "../components/fetchPages";
-import NavBar2 from "../components/NavBar2";
+import FetchPages from "./components/FetchPages";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +35,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${roboto.variable}`}>
       <body className={inter.className}>
-        <NavBar2 />
+        <NavBar />
         <FetchPages/>
         {children}
         <div className="h-10 mb-2">

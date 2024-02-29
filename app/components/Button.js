@@ -1,14 +1,23 @@
 import React from "react";
 
 const Button = (props) => {
-    const {mobile, classInfo} = props
-  return (
-    <a href="/" target="_blank">
-      <button className={!mobile ? `${classInfo} invisible md:visible ` : `${classInfo} visible md:invisible`} >
-        Call Now
-      </button>
-    </a>
-  );
+  const { mobile, classInfo, purpose } = props;
+
+  if (purpose === `call`) {
+    return (
+      <a href="tel:4045965518" target="_blank" rel="noopener noreferrer">
+        <button
+          className={
+            !mobile
+              ? `${classInfo} invisible md:visible `
+              : `${classInfo} visible md:invisible`
+          }
+        >
+          Call Now
+        </button>
+      </a>
+    );
+  }
 };
 
 // not mobile: bg-gold-400 hover:bg-blue-600 hover:text-gray-100 transition duration-150 ease-out hover:ease-in font-semibold px-2 text-sm rounded-sm  hover:scale-110

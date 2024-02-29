@@ -8,7 +8,7 @@ export const ServiceIcon = (props) => {
   return (
     <div className="flex flex-col items-center justify-center group">
       <div className="relative w-5/6 md:w-fit">
-        <a href="#">
+        <a href="/personal-injury">
           <Image
             src={service}
             alt={`image of service: ${name}`}
@@ -16,11 +16,14 @@ export const ServiceIcon = (props) => {
           />
         </a>
         <div className="group group-hover:relative flex flex-col ">
+          <Link href={`/personal-injury`}>
           <Image
             src={service}
             alt={`image of service: ${name}`}
             className="mx-auto w-fit m-4 h-fit rounded-md px-2"
           />
+          </Link>
+          
           <Link href={`/service/${name}`}><button
             className="invisible group-hover:visible  absolute inset-x-8 bottom-1/4 md:p-1
               

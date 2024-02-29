@@ -1,12 +1,12 @@
 import { getPages } from "@/sanity/sanity-utils";
-import NavBar2 from "./NavBar2";
+import NavBar from "./NavBar";
 
 export default async function FetchPages(){
   const pages = await getPages()
   console.log('my Pages:', pages)
   return(
     <div>
-      <NavBar2 allPages={{pages}}/>
+      <NavBar allPages={{pages}}/>
     </div>
   )
     

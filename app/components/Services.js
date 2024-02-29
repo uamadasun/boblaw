@@ -23,7 +23,7 @@ export const Services = () => {
   return (
     <div className="grid lg:grid-cols-4 grid-cols-2  gap-2 px-16">
         <ServiceIcon service={PersonalInjury} serviceShade={PersonalInjuryShade} name={'Personal Injury'}/>
-        <ServiceIcon service={MotorVehicle} serviceShade={MotorVehicleShade} name={'Motor Vehicle'}/>
+        <ServiceIcon service={MotorVehicle} serviceShade={MotorVehicleShade} name={'Motor Vehicle'} />
         <ServiceIcon service={TruckingAccidents} serviceShade={TruckingAccidentsShade} name={'Trucking Accidents'}/>
         <ServiceIcon service={WrongfulDeath} serviceShade={WrongfulDeathShade} name={'Wrongful Death'}/>
         <ServiceIcon service={WorkersComp} serviceShade={WorkersCompShade} name={'Workers Compensation'}/>

@@ -22,6 +22,7 @@ const Banner = () => {
             classInfo={
               "bg-gold-400  hover:bg-blue-600 hover:text-gray-100 transition duration-150 ease-out hover:ease-in font-semibold px-2 text-2xl mt-4  rounded-sm  hover:scale-110"
             }
+            purpose={"call"}
           />
         </div>
 
@@ -54,6 +55,7 @@ const Banner = () => {
               classInfo={
                 " bg-gold-400 font-semibold py-2 text-md rounded-sm w-1/2 mt-3 text-black "
               }
+              purpose={"call"}
             />
           </div>
         </div>
