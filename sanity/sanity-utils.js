@@ -38,3 +38,31 @@ export async function getBlog(slug) {
     }`, {slug})
 }
 
+// GET ALL PAGES
+export async function getPages(){
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "page"]{
+        _id,
+        _createdAt,
+        title,
+        'slug': slug.current,
+    }`
+  , {next: {
+    revalidate:60,
+  }}, {cache: 'no-store'});
+
+}
+
+// GET A SINGLE PAGE
+export async function getPage(slug){
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "page" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      title,
+      'slug': slug.current,
+        content
+    }`, {slug})
+  
+}
+
