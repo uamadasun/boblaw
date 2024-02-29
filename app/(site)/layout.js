@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { getPages } from "@/sanity/sanity-utils";
 import Link from "next/link";
-import FetchPages from "./components/FetchPages";
+import FetchPages from "../components/FetchPages";
 
 const inter = Inter({ subsets: ["latin"] });
 
