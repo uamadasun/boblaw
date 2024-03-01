@@ -4,7 +4,6 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { getPages } from "@/sanity/sanity-utils";
 import Link from "next/link";
-import FetchPages from "../components/FetchPages";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,18 +34,20 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${roboto.variable}`}>
       <body className={inter.className}>
-        <NavBar />
-        <FetchPages/>
+        <NavBar allPages={{ pages }} />
+
         {children}
-        <div className="h-10 mb-2">
-          {/* {pages.map((page) => (
-            <Link key={page.id} href={`/${page.slug}`}>
-              {page.title}
-            </Link>
-          ))} */}
-        </div>
+        <div className="h-10 mb-2"></div>
         <Footer />
       </body>
     </html>
   );
+}
+
+{
+  /* {pages.map((page) => (
+            <Link key={page.id} href={`/${page.slug}`}>
+              {page.title}
+            </Link>
+          ))} */
 }

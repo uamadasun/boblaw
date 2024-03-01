@@ -4,7 +4,7 @@ import Button from "./Button";
 import Link from "next/link";
 
 export const ServiceIcon = ({ eachPage }) => {
-  console.log(`Here is page ${eachPage.title}`);
+  // console.log(`Here is page ${eachPage.title}`);
   return (
     <div className="flex flex-col items-center justify-center group">
       <div className="relative w-5/6 md:w-fit">
@@ -29,13 +29,7 @@ export const ServiceIcon = ({ eachPage }) => {
           </Link>
 
           <Link href={`/${eachPage.slug}`}>
-            <button
-              className="invisible group-hover:visible absolute inset-x-8 bottom-1/4 md:p-1
-              
-             bg-gold-400 text-black font-extrabold rounded-sm"
-            >
-              Learn More
-            </button>
+            <Button purpose={'learn'}/>
           </Link>
         </div>
       </div>

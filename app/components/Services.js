@@ -3,7 +3,6 @@ import { ServiceIcon } from "./ServiceIcon";
 
 export const Services = (props) => {
   const { allPages } = props;
-  console.log("pages from services: ", allPages);
   return (
     <div className="grid lg:grid-cols-4 grid-cols-2  gap-2 px-16">
       {allPages &&

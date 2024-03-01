@@ -10,13 +10,24 @@ const Button = (props) => {
           className={
             !mobile
               ? `${classInfo} invisible md:visible `
-              : `${classInfo} visible md:invisible`
+              : `${classInfo} visible lg:invisible`
           }
         >
           Call Now
         </button>
       </a>
     );
+  }
+  else if(purpose === `learn`){
+    return(
+      <button
+              className="invisible group-hover:visible absolute inset-x-8 bottom-1/4 md:p-1
+              
+             bg-gold-400 text-black font-extrabold rounded-sm"
+            >
+              Learn More
+            </button>
+    )
   }
 };
 
