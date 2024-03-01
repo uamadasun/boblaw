@@ -46,6 +46,9 @@ export async function getPages(){
         _createdAt,
         title,
         'slug': slug.current,
+        'image': image.asset->url,
+        'shade': shade.asset->url,
+        type
     }`
   , {next: {
     revalidate:60,

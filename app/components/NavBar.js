@@ -12,14 +12,14 @@ import { Dialog } from "@headlessui/react";
 import { useState } from "react";
 
 export default function NavBar(props) {
-  console.log("Props in NavBar:", props);
+  // console.log("Props in NavBar:", props);
 
   const { allPages } = props;
-  console.log("allPages:", allPages);
+  // console.log("allPages:", allPages);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("Home");
 
-  console.log(currentPage);
+  // console.log(currentPage);
 
   return (
     // <div className="mt-40">
@@ -66,21 +66,25 @@ export default function NavBar(props) {
 
           <div className="hidden lg:flex lg:gap-x-12">
             {allPages &&
-              allPages.pages.map((page) => (
-                <Link
-                  key={page.id}
-                  href={`/${page.slug}`}
-                  className={
-                    page.title !== currentPage
-                      ? "text-sm font-semibold leading-6 text-black hover:text-gold-500 group transition duration-300"
-                      : "text-sm font-semibold leading-6 text-blue-700 hover:text-gold-500 group transition duration-300"
-                  }
-                  onClick={(e) => setCurrentPage(e.target.text)}
-                >
-                  {page.title}
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span>
-                </Link>
-              ))}
+              allPages.pages.map((page) =>
+                page.type !== "service" ? (
+                  <Link
+                    key={page.id}
+                    href={`/${page.slug}`}
+                    className={
+                      page.title !== currentPage
+                        ? "text-sm font-semibold leading-6 text-black hover:text-gold-500 group transition duration-300"
+                        : "text-sm font-semibold leading-6 text-blue-700 hover:text-gold-500 group transition duration-300"
+                    }
+                    onClick={(e) => setCurrentPage(e.target.text)}
+                  >
+                    {page.title}
+                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span>
+                  </Link>
+                ) : (
+                  ""
+                )
+              )}
             <Button
               mobile={false}
               classInfo={
@@ -118,26 +122,31 @@ export default function NavBar(props) {
               <div className="-my-6 divide-y divide-black">
                 <div className="space-y-2 py-4 ">
                   {allPages &&
-                    allPages.pages.map((page) => (
-                      <Link
-                        href={`/${page.slug}`}
-                        key={page.id}
-                        className={
-                          page.title !== currentPage
-                            ? "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-white "
-                            : "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-gold-400  "
-                        }
-                        onClick={(e) => setCurrentPage(e.target.text)}
-                      >
-                        {page.title}
-                      </Link>
-                    ))}
+                    allPages.pages.map((page) =>
+                      page.type !== "service" ? (
+                        <Link
+                          key={page.id}
+                          href={`/${page.slug}`}
+                          className={
+                            page.title !== currentPage
+                              ? "text-sm font-semibold leading-6 text-black hover:text-gold-500 group transition duration-300"
+                              : "text-sm font-semibold leading-6 text-blue-700 hover:text-gold-500 group transition duration-300"
+                          }
+                          onClick={(e) => setCurrentPage(e.target.text)}
+                        >
+                          {page.title}
+                          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-600"></span>
+                        </Link>
+                      ) : (
+                        ""
+                      )
+                    )}
                   <Button
                     mobile={true}
                     classInfo={
                       " bg-gold-400 font-semibold px-8 py-2 mt-4 text-sm rounded-sm w-full text-black"
                     }
-                    purpose={'call'}
+                    purpose={"call"}
                   />
                 </div>
               </div>
