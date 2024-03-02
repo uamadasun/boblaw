@@ -21,7 +21,7 @@ const Button = (props) => {
   else if(purpose === `learn`){
     return(
       <button
-              className="invisible group-hover:visible absolute inset-x-8 bottom-1/4 md:p-1
+              className="invisible group-hover:visible absolute inset-x-4 inset-y-8  md:p-1 ease-out transition-all delay-75
               
              bg-gold-400 text-black font-extrabold rounded-sm"
             >
