@@ -10,7 +10,7 @@ const Button = (props) => {
           className={
             !mobile
               ? `${classInfo} invisible md:visible `
-              : `${classInfo} visible lg:invisible`
+              : `${classInfo} visible md:invisible`
           }
         >
           Call Now
