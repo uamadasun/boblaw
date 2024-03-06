@@ -7,7 +7,7 @@ export const ServiceIcon = ({ eachPage }) => {
   return (
     <div className="flex flex-col items-center justify-center group">
       <Link href={`/${eachPage.slug}`}>
-        <div className="relative w-5/6 md:w-fit">
+        <div className="relative">
           <Image
             src={eachPage.image}
             alt={`image of service: ${eachPage.title}`}
