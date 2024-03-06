@@ -19,14 +19,14 @@ export const Services = (props) => {
         <Button
           mobile={false}
           classInfo={
-            " bg-gold-400 hover:bg-blue-600 hover:text-gray-100 transition duration-150 ease-out hover:ease-in font-semibold px-2 text-lg rounded-sm  hover:scale-110 min-w-full"
+            " bg-gold-400 hover:bg-blue-600 hover:text-gray-100 transition duration-150 ease-out hover:ease-in font-semibold px-2 text-lg rounded-sm  hover:scale-110 w-full"
           }
           purpose={"call"}
         />
         <Button
           mobile={true}
           classInfo={
-            " bg-gold-400 font-semibold px-8 py-2 mt-4 text-sm rounded-sm w-full text-black"
+            " bg-gold-400 font-semibold px-4 py-2 text-md rounded-sm text-black "
           }
           purpose={"call"}
         />

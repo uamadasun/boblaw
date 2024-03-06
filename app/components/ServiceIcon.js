@@ -17,7 +17,7 @@ export const ServiceIcon = ({ eachPage }) => {
           />
 
           <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-white text-lg md:text-4xl lg:text-2xl p-3 text-center font-bold uppercase">
+            <h1 className="text-white service-font md:text-4xl lg:text-2xl p-3 text-center font-bold uppercase">
               {eachPage.title}
             </h1>
             <Link href={`/${eachPage.slug}`}>

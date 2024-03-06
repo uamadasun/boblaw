@@ -1,33 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Heading Styles */
 
-h1, h2, h3 {
-  
+h1,
+h2,
+h3 {
 }
 
 h1 {
   font-size: 2rem; /* Adjust the font size as needed */
   line-height: 1.2; /* Adjust the line height as needed */
   margin-bottom: 10px; /* Adjust the margin as needed for spacing */
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
 }
 
 h2 {
   font-size: 1.5rem;
   line-height: 1.2;
   margin-bottom: 8px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h3 {
@@ -43,60 +43,67 @@ p {
   margin-bottom: 16px; /* Adjust the margin for spacing between paragraphs */
 }
 
-
-ol, ul {
-	list-style: none;
-  font-family: 'Roboto', sans-serif;
+ol,
+ul {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   box-sizing: border-box;
   width: 100%;
-  overflow:auto;
+  overflow: auto;
 }
 
-.highlights p{
-  font-family: 'Roboto', sans-serif;
-  color: #9CB3C1;
+.highlights p {
+  font-family: "Roboto", sans-serif;
+  color: #9cb3c1;
+}
+@media (max-width: 280px) {
   
 }
-@media (max-width:280px){
-  
 
+@media (max-width: 330px) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 540px) {
+  .service-font{
+    
+    font-size: 0.80rem/* 14px */;
+    line-height: 1.25rem/* 20px */;
+
+}
 }
 
 
-@media (max-width:330px){
-  
 
-}
-
-@media (max-width:375px){
-  
-
-}
-
-@media (min-width:912px){
-  .desk-banner{
-    margin-bottom: -55px;
+@media (min-width: 768px) {
+  .desk-banner {
+    margin-bottom: -62px;
   }
 
-
+  .main-banner {
+    width: 400px;
+  }
 }
 
-/* @media (max-width:1024px){
-  .desk-banner{
-    margin-bottom: -55px;
+@media (min-width: 912px) {
+  .desk-banner {
+    margin-bottom: -3px;
   }
+}
 
-} */
-
-/* @media (min-width:1280px){
-  .desk-banner{
-    margin-bottom: -54px;
+@media (min-width: 1024px) {
+  .desk-banner {
+    margin-bottom: -4px;
   }
+}
 
-} */
-
-
-
+@media (min-width: 1280px) {
+  .desk-banner {
+    margin-bottom: -2px;
+  }
+}

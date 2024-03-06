@@ -5,29 +5,30 @@ const Button = (props) => {
 
   if (purpose === `call`) {
     return (
-      <a href="tel:4045965518" target="_blank" rel="noopener noreferrer">
-        <button
-          className={
-            !mobile
-              ? `${classInfo} invisible md:visible `
-              : `${classInfo} visible md:invisible`
-          }
-        >
-          Call Now
-        </button>
-      </a>
+      <div>
+        <a href="tel:4045965518" target="_blank" rel="noopener noreferrer">
+          <button
+            className={
+              !mobile
+                ? `${classInfo} hidden md:block uppercase`
+                : `${classInfo} block md:hidden uppercase`
+            }
+          >
+            Call Now
+          </button>
+        </a>
+      </div>
     );
-  }
-  else if(purpose === `learn`){
-    return(
+  } else if (purpose === `learn`) {
+    return (
       <button
-              className="invisible group-hover:visible absolute inset-x-4 inset-y-8  md:p-1 ease-out transition-all delay-75
+        className="invisible group-hover:visible absolute inset-x-4 inset-y-8  md:p-1 ease-out transition-all delay-75
               
              bg-gold-400 text-black font-extrabold rounded-sm"
-            >
-              Learn More
-            </button>
-    )
+      >
+        Learn More
+      </button>
+    );
   }
 };
 

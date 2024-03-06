@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="">
+    <div >
       {/* DESKTOP HERO BANNER */}
       <header className=" desk-banner  w-full mt-32 hidden  md:flex -mb-28 ">
         <div className="flex-2 md:flex-1 h-auto flex flex-col justify-center pl-2  content-center">
@@ -30,7 +30,7 @@ const Banner = () => {
           src={banner.src}
           width={600}
           height={600}
-          className=" "
+          className="main-banner"
           alt="benjamin o bengston"
         />
       </header>
