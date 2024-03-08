@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import HighlightsSection from "../components/HighlightsSection";
 import OurPracticeSection from "../components/OurPracticeSection";
 import { Services } from "../components/Services";
+import { FeaturesSection } from "../components/FeaturesSection";
 
 export default async function Home() {
   const pages = await getPages();
@@ -13,6 +14,7 @@ export default async function Home() {
       <HighlightsSection />
       <OurPracticeSection />
       <Services allPages={{ pages }} />
+      <FeaturesSection/>
     </div>
   );
 }
