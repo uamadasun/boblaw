@@ -9,7 +9,7 @@ import quality from "../assets/images/featuresImages/quality.svg";
 export const FeaturesSection = () => {
   return (
     <div
-      className="mt-3 bg-right bg-cover bg-no-repeat flex flex-col md:flex-row py-16 px-0 md:px-5 gap-8 md:gap-4 items-center"
+      className=" bg-right bg-cover bg-no-repeat flex flex-col md:flex-row py-16 px-0 md:px-5 gap-8 md:gap-4 items-center"
       style={{
         backgroundImage: `url('${background.src}')`,
       }}

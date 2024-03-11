@@ -4,6 +4,7 @@ import HighlightsSection from "../components/HighlightsSection";
 import OurPracticeSection from "../components/OurPracticeSection";
 import { Services } from "../components/Services";
 import { FeaturesSection } from "../components/FeaturesSection";
+import { StepsSection } from "../components/StepsSection";
 
 export default async function Home() {
   const pages = await getPages();
@@ -15,6 +16,7 @@ export default async function Home() {
       <OurPracticeSection />
       <Services allPages={{ pages }} />
       <FeaturesSection/>
+      <StepsSection/>
     </div>
   );
 }

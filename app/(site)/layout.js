@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { getPages } from "@/sanity/sanity-utils";
 import Link from "next/link";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 const roboto = Roboto({
