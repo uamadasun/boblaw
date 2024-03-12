@@ -55,7 +55,7 @@ body {
   overflow: auto;
 }
 
-.highlights p {
+.highlights p, pre {
   font-family: "Roboto", sans-serif;
   color: #9cb3c1;
 }
