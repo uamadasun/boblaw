@@ -88,7 +88,7 @@ export const ContactForm = () => {
               </div>
             </div>
 
-            <div className="sm:col-span-2">
+            <div className="col-span-2">
               <label
                 htmlFor="email"
                 className="block text-sm font-semibold leading-6 text-gray-900"
@@ -101,7 +101,7 @@ export const ContactForm = () => {
                   name="email"
                   id="email"
                   autoComplete="email"
-                  className={`                  block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
+                  className={` w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
                   ${
                     errors.email
                       ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
@@ -124,7 +124,7 @@ export const ContactForm = () => {
               </div>
             </div>
 
-            <div className="sm:col-span-2">
+            <div className="col-span-2">
               <label
                 htmlFor="phone"
                 className="block text-sm font-semibold leading-6 text-gray-900"
@@ -137,7 +137,7 @@ export const ContactForm = () => {
                   name="phone"
                   id="phone"
                   autoComplete="tel"
-                  className={`            block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
+                  className={`             w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
                   ${
                     errors.phone
                       ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
@@ -160,7 +160,7 @@ export const ContactForm = () => {
               </div>
             </div>
 
-            <div className="sm:col-span-2">
+            <div className="col-span-2">
               <label
                 htmlFor="message"
                 className="block text-sm font-semibold leading-6 text-gray-900"
@@ -172,7 +172,7 @@ export const ContactForm = () => {
                   name="message"
                   id="message"
                   rows={4}
-                  className={`block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
+                  className={` w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
                   ${
                     errors.message
                       ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
@@ -206,12 +206,12 @@ export const ContactForm = () => {
       </form>
 
       {isSubmitSuccessful && isSuccess && (
-        <div className="-mt-28 text-sm text-center text-green-500 font-bold">
+        <div className="-mt-20 text-sm text-center text-green-500 font-bold">
           {message || "Success. Message sent successfully"}
         </div>
       )}
       {isSubmitSuccessful && !isSuccess && (
-        <div className="-mt-28 text-sm text-center text-red-500 font-bold">
+        <div className="-mt-20 text-sm text-center text-red-500 font-bold">
           {message || "Something went wrong. Please try later."}
         </div>
       )}
