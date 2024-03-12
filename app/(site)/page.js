@@ -6,6 +6,7 @@ import { Services } from "../components/Services";
 import { FeaturesSection } from "../components/FeaturesSection";
 import { StepsSection } from "../components/StepsSection";
 import { MissionSection } from "../components/MissionSection";
+import { ContactSection } from "../components/ContactSection";
 
 export default async function Home() {
   const pages = await getPages();
@@ -19,6 +20,7 @@ export default async function Home() {
       <FeaturesSection/>
       <StepsSection/>
       <MissionSection/>
+      <ContactSection/>
     </div>
   );
 }
