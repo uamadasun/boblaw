@@ -23,7 +23,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "BOB Law",
+  title: "BOB Law Firm",
   description:
     "Bob Law Firm - Experienced personal injury attorneys in Atlanta, Georgia. We offer free case evaluations and no fees unless we recover money for you. Get expert legal representation for your personal injury claim today.",
 };
@@ -38,8 +38,9 @@ export default async function RootLayout({ children }) {
         <NavBar allPages={{ pages }} />
 
         {children}
-        <div className="h-10 mb-2 text-center uppercase hover:text-gold-500 font-bold"><Link href={`#home`}>Return to top of page</Link></div>
-        <Footer />
+        <div className="h-10 md:mt-5 text-center uppercase hover:text-gold-500 font-bold">
+          <Link href={`#home`}>Return to top of page</Link>
+        </div>        <Footer />
       </body>
     </html>
   );
