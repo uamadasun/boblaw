@@ -8,6 +8,7 @@ export const MissionSection = () => {
       style={{
         backgroundImage: `url('${staff.src}')`,
       }}
+      id="about"
     >
       <h1 className="font-bold uppercase">Our Mission</h1>
       <pre className=" text-wrap text-center text text-white font-semibold px-4">

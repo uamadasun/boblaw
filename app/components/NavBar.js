@@ -15,11 +15,11 @@ export default function NavBar(props) {
   // console.log("Props in NavBar:", props);
 
   const { allPages } = props;
-  // console.log("allPages:", allPages);
+  console.log("allPages:", allPages);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("Home");
 
-  // console.log(currentPage);
+  console.log("current page: ", currentPage);
 
   return (
     // <div className="mt-40">
@@ -86,7 +86,7 @@ export default function NavBar(props) {
                 page.type !== "service" ? (
                   <Link
                     key={page.id}
-                    href={`/${page.slug}`}
+                    href={currentPage === "Home" ? `${page.type}` : page.title === "Blog" ? `/blog` : `/${page.type}`}
                     rel="noopener noreferrer"
                     className={
                       page.title !== currentPage
@@ -156,7 +156,7 @@ export default function NavBar(props) {
                       page.type !== "service" ? (
                         <Link
                           key={page.id}
-                          href={`/${page.slug}`}
+                          href={currentPage === "Home" ? `${page.type}` : page.title === "Blog" ? `/blog` : `/${page.type}`}
                           className={
                             page.title !== currentPage
                               ? "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-white "

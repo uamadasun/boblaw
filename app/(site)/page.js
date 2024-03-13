@@ -13,15 +13,15 @@ export default async function Home() {
   const pages = await getPages();
 
   return (
-    <div>
-      <Banner />
-      <HighlightsSection />
-      <OurPracticeSection />
-      <Services allPages={{ pages }} />
-      <FeaturesSection/>
-      <StepsSection/>
-      <MissionSection/>
-      <ContactSection/>
-    </div>
+      <div>
+        <Banner />
+        <HighlightsSection />
+        <OurPracticeSection />
+        <Services allPages={{ pages }} />
+        <FeaturesSection />
+        <StepsSection />
+        <MissionSection />
+        <ContactSection />
+      </div>
   );
 }

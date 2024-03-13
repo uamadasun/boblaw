@@ -11,7 +11,7 @@ export const FeatureCard = (props) => {
         alt="results card"
         width={50}
         height={50}
-        className="mt-3"
+        className="mt-3 "
       />
       <h3 className=" font-black my-2">{title}</h3>
       <h2 className="text-center text-sm text-blue-700  font-semibold mb-6">

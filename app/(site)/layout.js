@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { getPages } from "@/sanity/sanity-utils";
 import Link from "next/link";
+import { Providers } from "../providers";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -37,7 +38,7 @@ export default async function RootLayout({ children }) {
       <body className={inter.className}>
         <NavBar allPages={{ pages }} />
 
-        {children}
+        <Providers>{children}</Providers>
         <div className="h-10 md:mt-5 text-center uppercase hover:text-gold-500 font-bold">
           <Link href={`#home`}>Return to top of page</Link>
         </div>        <Footer />
