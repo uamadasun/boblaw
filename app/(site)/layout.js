@@ -38,7 +38,7 @@ export default async function RootLayout({ children }) {
         <NavBar allPages={{ pages }} />
 
         {children}
-        <div className="h-10 mb-2"></div>
+        <div className="h-10 mb-2 text-center uppercase hover:text-gold-500 font-bold"><Link href={`#home`}>Return to top of page</Link></div>
         <Footer />
       </body>
     </html>

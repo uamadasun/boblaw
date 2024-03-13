@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 
@@ -10,9 +10,6 @@ export const ContactForm = () => {
     handleSubmit,
     reset,
     register,
-    watch,
-    control,
-    setValue,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: "onTouched",
@@ -61,7 +58,7 @@ export const ContactForm = () => {
                 htmlFor="full-name"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                Full name
+                Full Name
               </label>
               <div className="mt-2.5">
                 <input
@@ -129,7 +126,7 @@ export const ContactForm = () => {
                 htmlFor="phone"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                Phone number
+                Phone Number
               </label>
               <div className="mt-2.5">
                 <input
@@ -179,7 +176,7 @@ export const ContactForm = () => {
                       : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
                   }`}
                   {...register("message", {
-                    required: "Enter your Message",
+                    required: "Enter your message",
                   })}
                   defaultValue={""}
                 />

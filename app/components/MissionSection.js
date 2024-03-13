@@ -9,7 +9,7 @@ export const MissionSection = () => {
         backgroundImage: `url('${staff.src}')`,
       }}
     >
-      <h1 className="font-bold">Our Mission</h1>
+      <h1 className="font-bold uppercase">Our Mission</h1>
       <pre className=" text-wrap text-center text text-white font-semibold px-4">
         {`We help people - particularly people who have been hurt by others.
         \nWe educate you about how the claim works so that we can together make

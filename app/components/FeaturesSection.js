@@ -8,12 +8,15 @@ import quality from "../assets/images/featuresImages/quality.svg";
 
 export const FeaturesSection = () => {
   return (
-    <div
-      className=" bg-right bg-cover bg-no-repeat flex flex-col md:flex-row py-16 px-0 md:px-5 gap-8 md:gap-4 items-center"
-      style={{
-        backgroundImage: `url('${background.src}')`,
-      }}
+    <div className="bg-right bg-cover bg-no-repeat " style={{
+      backgroundImage: `url('${background.src}')`,
+    }}>
+<h1 className="uppercase text-3xl md:text-4xl px-4 md:px-6 font-bold text-white text-center pt-8 -mb-7">Our commitment to you</h1>
+<div
+      className=" flex flex-col md:flex-row py-16 px-0 md:px-5 gap-8 md:gap-4 items-center"
+      
     >
+      
       <FeatureCard
         title={"Expertise"}
         description={
@@ -43,5 +46,10 @@ export const FeaturesSection = () => {
         icon={quality.src}
       />
     </div>
+
+
+
+    </div>
+    
   );
 };

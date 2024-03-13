@@ -4,6 +4,8 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import { ContactForm } from "./ContactForm";
+import Map from "./Map"
+import LoadMap from "./Map.js";
 
 export const ContactSection = () => {
   return (
@@ -43,13 +45,17 @@ export const ContactSection = () => {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">
               Get in touch
             </h2>
+
             <p className="mt-6 text-lg leading-8 text-gray-600">
               {`Ready to take the first step towards recovery? Reach out to us for
               a free consultation. We'll listen to your story, assess your case,
               and provide you with personalized legal guidance tailored to your
               needs.`}
             </p>
-            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
+            <LoadMap/>
+            
+
+            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600 flex flex-col items-center">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
@@ -100,12 +106,11 @@ export const ContactSection = () => {
                 </dd>
               </div>
             </dl>
+
           </div>
         </div>
-        
-<ContactForm/>
 
-
+        <ContactForm />
       </div>
     </div>
   );

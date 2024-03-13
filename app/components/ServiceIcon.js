@@ -6,7 +6,7 @@ import Link from "next/link";
 export const ServiceIcon = ({ eachPage }) => {
   return (
     <div className="flex flex-col items-center justify-center group">
-      <Link href={`/${eachPage.slug}`}>
+      <Link href={`/${eachPage.slug}`} rel="noopener noreferrer">
         <div className="relative">
           <Image
             src={eachPage.image}
@@ -20,7 +20,7 @@ export const ServiceIcon = ({ eachPage }) => {
             <h1 className="text-white service-font md:text-4xl lg:text-2xl p-3 text-center font-bold uppercase">
               {eachPage.title}
             </h1>
-            <Link href={`/${eachPage.slug}`}>
+            <Link href={`/${eachPage.slug}`}  rel="noopener noreferrer">
               <Button purpose={"learn"} />
             </Link>
           </div>

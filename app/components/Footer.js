@@ -11,14 +11,15 @@ const Footer = () => {
              inset-x-0
              bottom-0
              p-0.5
-             mt-10 footer"
+             footer"
       >
         Copyright &copy; 2024 Bob Law. Developed and Designed by{" "}
-        <Link href="https://uchenna.io" target="_blank">
-          <span className="hover:text-noire-gold-300 font-bold">
-            uchenna.io
-          </span>
-          .
+        <Link
+          href="https://uchenna.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="hover:text-gold-300 font-bold">uchenna.io</span>.
         </Link>
       </footer>
     </div>

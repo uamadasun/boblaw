@@ -39,7 +39,9 @@ export default function NavBar(props) {
           <div className="flex lg:flex-1">
             <Link
               href="/"
-              className="-m-1.5 p-1.5"
+              rel="noopener noreferrer"
+              className="-m-1.5 p-1.5 "
+              id="home"
               onClick={() => setCurrentPage("Home")}
             >
               <span className="sr-only">Bob Law</span>
@@ -67,6 +69,7 @@ export default function NavBar(props) {
           <div className="hidden lg:flex lg:gap-x-12">
             <Link
               href={`/`}
+              rel="noopener noreferrer"
               className={
                 currentPage !== "Home"
                   ? "text-sm font-semibold leading-6 text-black hover:text-gold-500 group transition duration-300"
@@ -84,6 +87,7 @@ export default function NavBar(props) {
                   <Link
                     key={page.id}
                     href={`/${page.slug}`}
+                    rel="noopener noreferrer"
                     className={
                       page.title !== currentPage
                         ? "text-sm font-semibold leading-6 text-black hover:text-gold-500 group transition duration-300"
@@ -118,7 +122,7 @@ export default function NavBar(props) {
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-2/5 overflow-y-auto bg-blue-700 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white">
             <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5">
+              <Link href="/" className="-m-1.5 p-1.5" rel="noopener noreferrer">
                 <span className="sr-only">bob law firm</span>
                 {/* <Image  src={Logo} alt="bob law firm logo" width={200} height={50} /> */}
               </Link>
@@ -141,6 +145,7 @@ export default function NavBar(props) {
                         ? "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-white "
                         : "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-gold-400  "
                     }
+                    rel="noopener noreferrer"
                     onClick={(e) => setCurrentPage("Home")}
                   >
                     Home
@@ -157,6 +162,7 @@ export default function NavBar(props) {
                               ? "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-white "
                               : "-mx-3 block rounded-lg px-3 py-2 text-center font-semibold leading-7 text-gold-400  "
                           }
+                          rel="noopener noreferrer"
                           onClick={(e) => setCurrentPage(e.target.text)}
                         >
                           {page.title}
