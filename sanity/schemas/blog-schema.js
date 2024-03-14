@@ -37,6 +37,11 @@ const blog = {
       type: "url",
     },
     {
+      name: "summary",
+      title: "Summary",
+      type: "string",
+    },
+    {
       name: "content",
       title: "Content",
       type: "array",

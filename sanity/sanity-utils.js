@@ -14,7 +14,8 @@ export async function getBlogs() {
         'slug': slug.current,
         'image': image.asset->url,
         url,
-        content
+        content,
+        summary
     }`
   , {next: {
     revalidate:60,
@@ -34,7 +35,8 @@ export async function getBlog(slug) {
         'slug': slug.current,
         'image': image.asset->url,
         url,
-        content
+        content,
+        
     }`, {slug})
 }
 
