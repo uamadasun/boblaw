@@ -12,7 +12,6 @@ import { Dialog } from "@headlessui/react";
 import { useState } from "react";
 
 export default function NavBar(props) {
-  // console.log("Props in NavBar:", props);
 
   const { allPages } = props;
   console.log("allPages:", allPages);
@@ -22,14 +21,6 @@ export default function NavBar(props) {
   console.log("current page: ", currentPage);
 
   return (
-    // <div className="mt-40">
-    //   {allPages.pages &&
-    //     allPages.pages.map((page) => (
-    //       <Link key={page.id} href={`/${page.slug}`}>
-    //         {page.title}
-    //       </Link>
-    //     ))}
-    // </div>
     <div>
       <header className="absolute inset-x-0 top-0 z-50 bg-opacity-5 ">
         <nav
@@ -175,7 +166,7 @@ export default function NavBar(props) {
                   <Button
                     mobile={true}
                     classInfo={
-                      " bg-gold-400 font-semibold px-8 py-2 mt-4 text-sm rounded-sm w-full text-black"
+                      " bg-gold-400 font-semibold px-4 py-2 mt-4 text-sm rounded-sm max-w-full mx-auto text-black"
                     }
                     purpose={"call"}
                   />

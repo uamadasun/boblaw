@@ -7,7 +7,6 @@ import { FeaturesSection } from "../components/FeaturesSection";
 import { StepsSection } from "../components/StepsSection";
 import { MissionSection } from "../components/MissionSection";
 import { ContactSection } from "../components/ContactSection";
-import NavBar from "../components/NavBar";
 
 export default async function Home() {
   const pages = await getPages();

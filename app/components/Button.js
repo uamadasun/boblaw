@@ -11,7 +11,7 @@ const Button = (props) => {
             className={
               !mobile
                 ? `${classInfo} hidden md:block uppercase`
-                : `${classInfo} block md:hidden uppercase`
+                : `${classInfo} block lg:hidden uppercase`
             }
           >
             Call Now

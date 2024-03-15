@@ -26,7 +26,7 @@ export const Services = (props) => {
         <Button
                     mobile={true}
                     classInfo={
-                      " bg-gold-400 font-semibold py-5 px-24  text-sm rounded-sm w-full text-black"
+                      " bg-gold-400 font-semibold py-5 px-24  text-sm rounded-sm w-full text-black md:hidden"
                     }
                     purpose={"call"}
                   />
