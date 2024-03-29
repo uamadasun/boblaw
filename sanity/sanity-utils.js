@@ -18,7 +18,7 @@ export async function getBlogs() {
         summary
     }`
   , {next: {
-    revalidate:60,
+    revalidate:30,
   }}, {cache: 'no-store'});
 }
 
