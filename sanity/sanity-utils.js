@@ -17,9 +17,7 @@ export async function getBlogs() {
         summary
     }`,
     {
-      next: {
-        revalidate: 0,
-      },
+      cache: "no-store"
     },
 
   );
@@ -60,9 +58,7 @@ export async function getPages() {
         type
     }`,
     {
-      next: {
-        revalidate: 0,
-      },
+      cache: "no-store"
     },
   );
 }
