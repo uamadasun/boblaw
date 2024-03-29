@@ -1,11 +1,10 @@
 import { createClient, groq } from "next-sanity";
-import clientConfig from "./config/client-config"
+import clientConfig from "./config/client-config";
 
 //all the functions we will use to grab data
 
 // GET ALL BLOGS
 export async function getBlogs() {
-
   return createClient(clientConfig).fetch(
     groq`*[_type == "blog"]{
         _id,
@@ -16,17 +15,18 @@ export async function getBlogs() {
         url,
         content,
         summary
-    }`
-  , {next: {
-    revalidate:10,
-  }}, {cache: 'no-store'});
+    }`,
+    {
+      next: {
+        revalidate: 10,
+      },
+    },
+    { cache: "no-store" }
+  );
 }
-
 
 // GET A SINGLE BLOG
 export async function getBlog(slug) {
-  
-
   return createClient(clientConfig).fetch(
     groq`*[_type == "blog" && slug.current == $slug][0]{
         _id,
@@ -37,11 +37,19 @@ export async function getBlog(slug) {
         url,
         content,
         
-    }`, {slug})
+    }`,
+    { slug },
+    {
+      next: {
+        revalidate: 10,
+      },
+    },
+    { cache: "no-store" }
+  );
 }
 
 // GET ALL PAGES
-export async function getPages(){
+export async function getPages() {
   return createClient(clientConfig).fetch(
     groq`*[_type == "page"]{
         _id,
@@ -51,15 +59,18 @@ export async function getPages(){
         'image': image.asset->url,
         'shade': shade.asset->url,
         type
-    }`
-  , {next: {
-    revalidate:10,
-  }}, {cache: 'no-store'});
-
+    }`,
+    {
+      next: {
+        revalidate: 10,
+      },
+    },
+    { cache: "no-store" }
+  );
 }
 
 // GET A SINGLE PAGE
-export async function getPage(slug){
+export async function getPage(slug) {
   return createClient(clientConfig).fetch(
     groq`*[_type == "page" && slug.current == $slug][0]{
       _id,
@@ -67,7 +78,7 @@ export async function getPage(slug){
       title,
       'slug': slug.current,
         content
-    }`, {slug})
-  
+    }`,
+    { slug },
+  );
 }
-
