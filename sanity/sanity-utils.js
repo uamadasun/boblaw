@@ -18,10 +18,10 @@ export async function getBlogs() {
     }`,
     {
       next: {
-        revalidate: 60,
+        revalidate: 0,
       },
     },
-    { cache: "no-store" }
+
   );
 }
 
@@ -41,10 +41,9 @@ export async function getBlog(slug) {
     { slug },
     {
       next: {
-        revalidate: 60,
+        revalidate: 0,
       },
     },
-    { cache: "no-store" }
   );
 }
 
