@@ -18,7 +18,7 @@ export async function getBlogs() {
     }`,
     {
       next: {
-        revalidate: 10,
+        revalidate: 60,
       },
     },
     { cache: "no-store" }
@@ -41,7 +41,7 @@ export async function getBlog(slug) {
     { slug },
     {
       next: {
-        revalidate: 10,
+        revalidate: 60,
       },
     },
     { cache: "no-store" }
@@ -62,10 +62,9 @@ export async function getPages() {
     }`,
     {
       next: {
-        revalidate: 10,
+        revalidate: 0,
       },
     },
-    { cache: "no-store" }
   );
 }
 
@@ -80,5 +79,10 @@ export async function getPage(slug) {
         content
     }`,
     { slug },
+    {
+      next: {
+        revalidate: 0,
+      },
+    },
   );
 }
