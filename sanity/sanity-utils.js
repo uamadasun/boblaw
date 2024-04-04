@@ -70,6 +70,7 @@ export async function getPage(slug) {
       _id,
       _createdAt,
       title,
+      image,
       'slug': slug.current,
         content
     }`,

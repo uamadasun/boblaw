@@ -13,7 +13,7 @@
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@material-tailwind/react": "^2.1.9",
-    "@portabletext/react": "^3.0.11",
+    "@portabletext/react": "^3.0.15",
     "@react-google-maps/api": "^2.19.3",
     "@sanity/client": "^6.12.3",
     "@sanity/image-url": "^1.0.2",
