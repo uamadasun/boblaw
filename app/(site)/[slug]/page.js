@@ -11,7 +11,7 @@ export default async function Page({ params }) {
 
   const components = {
     types: {
-      header: ({ value }) => <h2 className="text-center -mb-4 text-xl font-black leading-5 mt-8">{value.text}</h2>,
+      header: ({ value }) => <h2 className="text-center -mb-3  text-xl font-black leading-6 mt-8 text-blue-700">{value.text}</h2>,
       headerTwo: ({ value }) => <h3 className="text-center text-sm italic">{value.text}</h3>,
     },
   };
@@ -20,7 +20,7 @@ export default async function Page({ params }) {
     <div className="mt-24 text-9xl">
       <PageBanner page={page} />
 
-        <div className=" text-black w-5/6 mx-auto">
+        <div className=" text-black w-5/6 mx-auto text-justify">
           <PortableText value={page.content} components={components} />
         </div>
     </div>
